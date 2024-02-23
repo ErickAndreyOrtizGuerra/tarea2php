@@ -1,11 +1,16 @@
 <?php
-// Definir el numero a verificar
-$numeroSeleccionado = 36; // Puedes cambiar este numero al que desees verificar
+// Definir el numero del cual calcular el factorial
+$numeroBase = 11; // Puedes cambiar este numero al que desees calcular su factorial
 
-// Verificar si el numero es par o impar usando una estructura condicional if-else
-if ($numeroSeleccionado % 2 == 0) {
-    echo "El numero seleccionado ($numeroSeleccionado) es par.";
-} else {
-    echo "El numero seleccionado ($numeroSeleccionado) es impar.";
+// Inicializar variables
+$factorial = 1;
+$i = 1;
+
+// Calcular el factorial utilizando un bucle while
+while ($i <= $numeroBase) {
+    $factorial *= $i;
+    $i++;
 }
+// Mostrar el resultado
+echo "El factorial  $numeroBase es: $factorial";
 ?>
