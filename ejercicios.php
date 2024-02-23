@@ -1,16 +1,10 @@
 <?php
-// Definir el numero del cual calcular el factorial
-$numeroBase = 11; // Puedes cambiar este numero al que desees calcular su factorial
+// Generar un array con 20 numeros aleatorios entre 1 y 100
+$numeros = array_map(fn() => rand(1, 10), range(1, 20));
 
-// Inicializar variables
-$factorial = 1;
-$i = 1;
+// Ordenar los numeros de mayor a menor
+rsort($numeros);
 
-// Calcular el factorial utilizando un bucle while
-while ($i <= $numeroBase) {
-    $factorial *= $i;
-    $i++;
-}
-// Mostrar el resultado
-echo "El factorial  $numeroBase es: $factorial";
+// Mostrar los numeros aleatorios generados y ordenados
+echo "Los numeros aleatorios generados y ordenados de mayor a menor: " . implode(' ', $numeros);
 ?>
